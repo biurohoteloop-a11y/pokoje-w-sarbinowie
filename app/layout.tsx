@@ -3,6 +3,8 @@ import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import SchemaOrg from "./components/SchemaOrg";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pokoje-w-sarbinowie.pl"),
@@ -56,10 +58,14 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body>
+        <head>
+          <SchemaOrg />
+        </head>
         <Navigation />
         {children}
         <Footer />
         <Analytics /> {/* ← TO BYŁO BRAKUJĄCE! */}
+
       </body>
     </html>
   );
