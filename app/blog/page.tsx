@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Porady na wakacje nad Bałtykiem. Najlepsze atrakcje Sarbinowa i polskiego wybrzeża.",
     type: "website",
     locale: "pl_PL",
-    url: "https://pokoje-w-sarbinowie.pl/blog",
+    url: "https://www.pokoje-w-sarbinowie.pl/blog", // ← www
     images: [
       {
         url: "/images/baner-blog.jpg",
@@ -32,8 +32,9 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: "https://pokoje-w-sarbinowie.pl/blog" },
+  alternates: { canonical: "https://www.pokoje-w-sarbinowie.pl/blog" }, // ← www
 };
+
 
 export const blogPosts = [
   {

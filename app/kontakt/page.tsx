@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     "tanie noclegi Sarbinowo telefon",
   ],
   alternates: {
-    canonical: "https://pokoje-w-sarbinowie.pl/kontakt",
+    canonical: "https://www.pokoje-w-sarbinowie.pl/kontakt", // ← www
   },
   openGraph: {
     title: "Kontakt | Pokoje w Sarbinowie nad morzem",
     description:
       "Zarezerwuj pokój w Sarbinowie nad morzem. Tanie noclegi od 80 zł/os. Zadzwoń lub napisz!",
-    url: "https://pokoje-w-sarbinowie.pl/kontakt",
+    url: "https://www.pokoje-w-sarbinowie.pl/kontakt", // ← www
     type: "website",
     locale: "pl_PL",
   },

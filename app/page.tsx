@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     "pokoje 150m od morza Sarbinowo",
   ],
   alternates: {
-    canonical: "https://pokoje-w-sarbinowie.pl",
+    canonical: "https://www.pokoje-w-sarbinowie.pl", // ← www
   },
   openGraph: {
     title: "Pokoje w Sarbinowie nad morzem | Tanie Noclegi od 80zł",
     description:
       "Tanie pokoje w Sarbinowie, 150m od plaży. Noclegi nad Bałtykiem z łazienką, TV, WiFi i parkingiem.",
-    url: "https://pokoje-w-sarbinowie.pl",
+    url: "https://www.pokoje-w-sarbinowie.pl", // ← www
     type: "website",
     locale: "pl_PL",
   },

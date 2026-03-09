@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://pokoje-w-sarbinowie.pl/sitemap.xml",
-    host: "https://pokoje-w-sarbinowie.pl",
+    sitemap: "https://www.pokoje-w-sarbinowie.pl/sitemap.xml", // ← www
+    host: "https://www.pokoje-w-sarbinowie.pl", // ← www
   };
 }

@@ -1,11 +1,13 @@
 export default function SchemaOrg() {
+  const BASE_URL = "https://www.pokoje-w-sarbinowie.pl"; // ← jedna zmienna
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     name: "Pokoje Przy Morzu Sarbinowo",
     description:
       "Tanie pokoje w Sarbinowie nad morzem, 150m od plaży. Noclegi z łazienką, TV, kuchnią i parkingiem. Idealne wakacje nad Bałtykiem dla rodzin.",
-    url: "https://pokoje-w-sarbinowie.pl",
+    url: BASE_URL, // ← www
     telephone: ["+48502180028", "+48503300348"],
     email: "kontakt@pokoje-w-sarbinowie.pl",
     address: {
@@ -57,7 +59,7 @@ export default function SchemaOrg() {
       ratingValue: "4.8",
     },
     sameAs: ["https://www.facebook.com/"],
-    image: "https://pokoje-w-sarbinowie.pl/images/hero-seaside.png",
+    image: `${BASE_URL}/images/hero-seaside.png`, // ← www
     checkinTime: "14:00",
     checkoutTime: "10:00",
     availableLanguage: {

@@ -1,9 +1,8 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "./blog/page";
 
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://pokoje-w-sarbinowie.pl";
+  const baseUrl = "https://www.pokoje-w-sarbinowie.pl"; // ← dodaj www
 
   const blogUrls = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,

@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     "pokoje z widokiem na morze Sarbinowo",
   ],
   alternates: {
-    canonical: "https://pokoje-w-sarbinowie.pl/azak-sarbinowo",
+    canonical: "https://www.pokoje-w-sarbinowie.pl/azak-sarbinowo", // ← www
   },
   openGraph: {
     title: "Pensjonat Azak Sarbinowo | Pokoje i Apartamenty nad morzem",
     description:
       "Pokoje, apartamenty i domki kilka kroków od plaży w Sarbinowie. Rezerwacja telefoniczna: +48 502 180 028",
-    url: "https://pokoje-w-sarbinowie.pl/azak-sarbinowo",
+    url: "https://www.pokoje-w-sarbinowie.pl/azak-sarbinowo", // ← www
     type: "website",
     locale: "pl_PL",
   },

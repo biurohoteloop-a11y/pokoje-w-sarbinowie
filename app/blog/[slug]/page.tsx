@@ -813,13 +813,13 @@ export async function generateMetadata({
       "wakacje nad morzem",
       "bałtyk",
     ],
-    alternates: {
-      canonical: `https://pokoje-w-sarbinowie.pl/blog/${post.slug}`,
+   alternates: {
+      canonical: `https://www.pokoje-w-sarbinowie.pl/blog/${post.slug}`, // ← www
     },
     openGraph: {
       title: `${post.title} | Blog Sarbinowo`,
       description: post.excerpt,
-      url: `https://pokoje-w-sarbinowie.pl/blog/${post.slug}`,
+      url: `https://www.pokoje-w-sarbinowie.pl/blog/${post.slug}`, // ← www
       type: "article",
       locale: "pl_PL",
       publishedTime: post.date,
@@ -834,6 +834,7 @@ export async function generateMetadata({
     },
   };
 }
+
 
 
 // ============================================
