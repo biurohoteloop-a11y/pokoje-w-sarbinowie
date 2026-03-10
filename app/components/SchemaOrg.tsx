@@ -1,13 +1,14 @@
 export default function SchemaOrg() {
-  const BASE_URL = "https://www.pokoje-w-sarbinowie.pl"; // ← jedna zmienna
+  const BASE_URL = "https://www.pokoje-w-sarbinowie.pl";
 
-  const schema = {
+  const lodgingBusiness = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
+    "@id": `${BASE_URL}/#lodging`,
     name: "Pokoje Przy Morzu Sarbinowo",
     description:
       "Tanie pokoje w Sarbinowie nad morzem, 150m od plaży. Noclegi z łazienką, TV, kuchnią i parkingiem. Idealne wakacje nad Bałtykiem dla rodzin.",
-    url: BASE_URL, // ← www
+    url: BASE_URL,
     telephone: ["+48502180028", "+48503300348"],
     email: "kontakt@pokoje-w-sarbinowie.pl",
     address: {
@@ -59,7 +60,7 @@ export default function SchemaOrg() {
       ratingValue: "4.8",
     },
     sameAs: ["https://www.facebook.com/"],
-    image: `${BASE_URL}/images/hero-seaside.png`, // ← www
+    image: `${BASE_URL}/images/hero-seaside.png`,
     checkinTime: "14:00",
     checkoutTime: "10:00",
     availableLanguage: {
@@ -68,10 +69,41 @@ export default function SchemaOrg() {
     },
   };
 
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${BASE_URL}/#website`,
+    name: "Pokoje w Sarbinowie nad morzem",
+    url: BASE_URL,
+    publisher: {
+      "@id": `${BASE_URL}/#lodging`,
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${BASE_URL}/?s={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Strona główna",
+        item: BASE_URL,
+      },
+    ],
+  };
+
+  const schemas = [lodgingBusiness, webSite, breadcrumb];
+
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
     />
   );
 }

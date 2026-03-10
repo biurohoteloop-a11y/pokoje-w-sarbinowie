@@ -5,10 +5,10 @@ import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import SchemaOrg from "./components/SchemaOrg";
 
-const BASE_URL = "https://www.pokoje-w-sarbinowie.pl"; // ← jedna zmienna dla wszystkich
+const BASE_URL = "https://www.pokoje-w-sarbinowie.pl";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL), // ← www
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "Pokoje w Sarbinowie nad morzem | Tanie Noclegi Bałtyk",
     template: "%s | Pokoje w Sarbinowie",
@@ -35,11 +35,11 @@ export const metadata: Metadata = {
       "Tanie pokoje w Sarbinowie, 150m od plaży. Noclegi nad Bałtykiem z łazienką, TV i parkingiem.",
     type: "website",
     locale: "pl_PL",
-    url: BASE_URL, // ← www
+    url: BASE_URL,
     siteName: "Pokoje w Sarbinowie",
   },
   alternates: {
-    canonical: BASE_URL, // ← www
+    canonical: BASE_URL,
   },
   robots: {
     index: true,
@@ -59,9 +59,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body>
-        <head>
-          <SchemaOrg />
-        </head>
+        <SchemaOrg />
         <Navigation />
         {children}
         <Footer />
