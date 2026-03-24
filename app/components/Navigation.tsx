@@ -6,9 +6,11 @@ import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
   { label: "Strona Główna", href: "/" },
+  { label: "AZAK", href: "/azak-sarbinowo" },
   { label: "Blog", href: "/blog" },
   { label: "Kontakt", href: "/kontakt" },
 ];
+
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);

@@ -22,7 +22,7 @@ const ROOMS = [
     desc: "Przytulny pokój 2-osobowy z własną łazienką. TV, czajnik i lodówka w pokoju. Idealny na romantyczny wypoczynek.",
     price: "80 zł / os.",
     guests: "2 osoby",
-    image: "/images/room-1.jpg",
+    image: "/images/sypialnia.jpeg",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const ROOMS = [
     desc: "Komfortowy pokój 2-osobowy z łazienką, TV, czajnikiem i lodówką. Cisza i spokój nad morzem.",
     price: "80 zł / os.",
     guests: "2 osoby",
-    image: "/images/room-2.jpg",
+    image: "/images/Horyzont.jpg",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const ROOMS = [
     desc: "Przestronny pokój 4-osobowy z łazienką. Wyposażony w TV, czajnik i lodówkę. Świetny dla rodzin.",
     price: "80 zł / os.",
     guests: "4 osoby",
-    image: "/images/room-3.jpg",
+    image: "/images/room-1.jpg",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const ROOMS = [
     desc: "Jasny pokój 2-osobowy z własną łazienką, TV i lodówką. Widok na zielony ogród.",
     price: "80 zł / os.",
     guests: "2 osoby",
-    image: "/images/room-4.jpg",
+    image: "/images/jadalnia.jpeg",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const ROOMS = [
     desc: "Duży pokój 4-osobowy z łazienką, idealny na rodzinne wakacje. TV, czajnik, lodówka w pokoju.",
     price: "80 zł / os.",
     guests: "4 osoby",
-    image: "/images/room-5.jpg",
+    image: "/images/salonik.jpeg",
   },
 ];
 
