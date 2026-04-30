@@ -1,26 +1,6 @@
-import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
 
-export const metadata: Metadata = {
-  title: "Kontakt - Pokoje u Babci Jadzi w Sarbinowie",
-  description:
-    "Skontaktuj się z nami i zarezerwuj pokój w Sarbinowie. Telefon, email, formularz kontaktowy. Pokoje od 80 zł/os., 150m od morza.",
-  keywords: [
-    "kontakt pokoje sarbinowo",
-    "rezerwacja noclegu sarbinowo",
-    "pokoje u babci jadzi telefon",
-    "noclegi sarbinowo kontakt",
-  ],
-  openGraph: {
-    title: "Kontakt - Pokoje u Babci Jadzi w Sarbinowie",
-    description: "Zarezerwuj pokój w Sarbinowie. Telefon, email, formularz kontaktowy.",
-    type: "website",
-    locale: "pl_PL",
-  },
-  alternates: { canonical: "https://pokojeubabc.pl/kontakt" },
-};
-
-export default function KontaktPage() {
+export default function KontaktClient() {
   return (
     <>
      {/* ===== HERO BANER ===== */}

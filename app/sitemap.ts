@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { blogPosts } from "./blog/page";
+import { blogPosts } from "./blog/posts-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.pokoje-w-sarbinowie.pl"; // ← dodaj www

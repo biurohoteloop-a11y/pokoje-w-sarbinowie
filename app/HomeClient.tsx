@@ -296,7 +296,7 @@ function HeroSection() {
           style={{ fontFamily: "'DM Sans', sans-serif" }}
           data-testid="text-hero-subtitle"
         >
-          Komfortowe noclegi kilka kroków od bałtyckiej plaży.
+          Tanie pokoje i tanie noclegi w Sarbinowie — kilka kroków od bałtyckiej plaży.
           <br className="hidden md:block" />
           Cisza, morska bryza i domowa atmosfera — od
           <span className="text-[#7dbde8] font-medium"> 80 zł </span>

@@ -13,7 +13,13 @@ export default function SchemaOrg() {
     name: "Pokoje Przy Morzu Sarbinowo",
     alternateName: "Pokoje u Babci Sarbinowo",
     description:
-      "Tanie pokoje w Sarbinowie nad morzem, 150m od plaży. Noclegi z łazienką, TV, kuchnią i parkingiem. Idealne wakacje nad Bałtykiem dla rodzin.",
+      "Tanie pokoje Sarbinowo i tanie noclegi Sarbinowo nad morzem — ok. 150 m od plaży. Pokoje w Sarbinowie z łazienką, TV, kuchnią i parkingiem. Wakacje nad Bałtykiem dla rodzin.",
+    knowsAbout: [
+      "pokoje w Sarbinowie",
+      "tanie noclegi Sarbinowo",
+      "tanie pokoje Sarbinowo",
+      "noclegi nad Bałtykiem Sarbinowo",
+    ],
     url: BASE_URL,
     telephone: "+48502180028",
     email: "kontakt@pokoje-w-sarbinowie.pl",
@@ -76,6 +82,8 @@ export default function SchemaOrg() {
     "@type": "WebSite",
     "@id": `${BASE_URL}/#website`,
     name: "Pokoje w Sarbinowie nad morzem",
+    description:
+      "Tanie pokoje i tanie noclegi Sarbinowo — pokoje w Sarbinowie przy plaży nad Bałtykiem.",
     url: BASE_URL,
     publisher: {
       "@id": `${BASE_URL}/#lodging`,

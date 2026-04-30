@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.35",
     "@vercel/analytics": "^1.6.1",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.34.2",

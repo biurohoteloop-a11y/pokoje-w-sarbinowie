@@ -3,9 +3,12 @@ import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import SchemaOrg from "./components/SchemaOrg";
 
 const BASE_URL = "https://www.pokoje-w-sarbinowie.pl";
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -14,10 +17,11 @@ export const metadata: Metadata = {
     template: "%s | Pokoje w Sarbinowie",
   },
   description:
-    "Tanie pokoje w Sarbinowie nad morzem, 150m od plaży. Noclegi Sarbinowo z łazienką, TV, kuchnią i parkingiem. Idealne wakacje nad Bałtykiem dla rodzin. Od 80 zł/os.",
+    "Tanie pokoje Sarbinowo i tanie noclegi Sarbinowo nad morzem — 150 m od plaży. Pokoje w Sarbinowie z łazienką, TV, kuchnią i parkingiem. Wakacje nad Bałtykiem dla rodzin. Od 80 zł/os.",
   keywords: [
     "pokoje Sarbinowo",
     "pokoje w Sarbinowie",
+    "tanie pokoje Sarbinowo",
     "noclegi Sarbinowo",
     "tanie noclegi Sarbinowo",
     "tanie noclegi nad morzem",
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pokoje w Sarbinowie nad morzem | Tanie Noclegi",
     description:
-      "Tanie pokoje w Sarbinowie, 150m od plaży. Noclegi nad Bałtykiem z łazienką, TV i parkingiem. Od 80 zł/os.",
+      "Tanie pokoje Sarbinowo i tanie noclegi Sarbinowo — 150 m od plaży. Pokoje w Sarbinowie z pełnym wyposażeniem. Od 80 zł/os.",
     type: "website",
     locale: "pl_PL",
     url: BASE_URL,
@@ -51,11 +55,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pokoje w Sarbinowie nad morzem | Tanie Noclegi",
     description:
-      "Tanie pokoje w Sarbinowie, 150m od plaży. Noclegi nad Bałtykiem z łazienką, TV i parkingiem. Od 80 zł/os.",
+      "Tanie pokoje Sarbinowo i tanie noclegi Sarbinowo — 150 m od plaży. Od 80 zł/os.",
     images: [`${BASE_URL}/images/hero-seaside.png`],
-  },
-  alternates: {
-    canonical: BASE_URL,
   },
   robots: {
     index: true,
@@ -68,10 +69,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Jeśli masz kod weryfikacji Google Search Console - wklej tutaj:
-    // google: "TWOJ_KOD_WERYFIKACJI",
-  },
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
   other: {
     "geo.region": "PL-32",
     "geo.placename": "Sarbinowo",
@@ -97,6 +97,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        {gaMeasurementId ? <GoogleAnalytics gaId={gaMeasurementId} /> : null}
         <Analytics />
       </body>
     </html>

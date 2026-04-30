@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "noclegi Sarbinowo nad morzem",
     "pokoje w Sarbinowie",
     "tanie noclegi Sarbinowo",
+    "tanie pokoje Sarbinowo",
     "kwatery Sarbinowo",
     "Sarbinowo blisko plaży",
     "pokoje z widokiem na morze Sarbinowo",

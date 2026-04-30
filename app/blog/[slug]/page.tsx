@@ -7,8 +7,9 @@ import {
   Bike, Fish, TreePine, Sailboat, Users, Wallet, Bed,
   Heart, Sun, Waves, Phone
 } from "lucide-react";
-import { blogPosts } from "../page";
+import { blogPosts } from "../posts-data";
 
+const SITE = "https://www.pokoje-w-sarbinowie.pl";
 
 // ============================================
 // PEŁNE TREŚCI ARTYKUŁÓW - SEO CONTENT
@@ -204,7 +205,7 @@ const articleContent: Record<string, {
   // ARTYKUŁ 2 - TANIE NOCLEGI NAD MORZEM
   // ============================================
   "tanie-noclegi-nad-morzem-jak-zaoszczedzic": {
-    heroImage: "/images/room-1.jpg",
+    heroImage: "/images/ROOM-1.jpg",
     sections: [
       {
         type: "text",
@@ -809,6 +810,9 @@ export async function generateMetadata({
       "sarbinowo",
       "noclegi sarbinowo",
       "pokoje sarbinowo",
+      "pokoje w sarbinowie",
+      "tanie noclegi sarbinowo",
+      "tanie pokoje sarbinowo",
       post.category.toLowerCase(),
       "wakacje nad morzem",
       "bałtyk",
@@ -870,25 +874,25 @@ export default function BlogArticlePage({
             "@type": "Article",
             headline: post.title,
             description: post.excerpt,
-            image: article.heroImage,
+            image: `${SITE}${article.heroImage.startsWith("/") ? article.heroImage : `/${article.heroImage}`}`,
             datePublished: post.date,
             dateModified: post.date,
             author: {
               "@type": "Organization",
               name: "Pokoje u Babci Jadzi",
-              url: "https://pokojeubabc.pl",
+              url: SITE,
             },
             publisher: {
               "@type": "Organization",
               name: "Pokoje u Babci Jadzi",
               logo: {
                 "@type": "ImageObject",
-                url: "https://pokojeubabc.pl/images/logo klientki.png",
+                url: `${SITE}/images/${encodeURIComponent("logo klientki.png")}`,
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://pokojeubabc.pl/blog/${post.slug}`,
+              "@id": `${SITE}/blog/${post.slug}`,
             },
           }),
         }}
